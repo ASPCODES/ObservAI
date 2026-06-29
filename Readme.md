@@ -93,7 +93,7 @@ Track:
           |                        |                    |                 |
           |                        |                    |                 |
      PostgreSQL                Redis Cache        PostgreSQL        Redis Cache
-       (Prisma)                                                   (Realtime Stats)
+       (GORM)                                                   (Realtime Stats)
           |                                                         |
           |                                                         |
           -----------------------------------------------------------
