@@ -127,7 +127,7 @@ Track:
 ### Database
 
 * PostgreSQL
-* Prisma ORM
+* GORM
 
 ### Infrastructure
 
