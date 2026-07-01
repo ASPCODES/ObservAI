@@ -216,3 +216,70 @@ without building custom observability and gateway solutions from scratch.
 ---
 
 **Built for developers who want complete visibility into their API infrastructure.**
+
+---
+
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/ASPCODES/ObservAI.git
+```
+
+cd ObservAI
+
+
+### 2. Prerequisites
+Go 1.23+
+Node.js 18+
+pnpm
+Docker Desktop
+
+
+### 3. Run PostgreSQL with Docker
+
+```bash
+docker run --name your-project-postgres -e POSTGRES_USER=your_username -e POSTGRES_PASSWORD=your_password -e POSTGRES_DB=your_database -p 5432:5432 -d postgres:16-alpine
+```
+
+Verify it's running:
+```bash
+docker ps
+```
+
+
+### 4. Create the .env file
+
+```bash
+cd apps/api
+touch .env
+
+Add:
+
+PORT=8080
+DATABASE_URL=postgres://your_username:your_password@localhost:5432/your_database?sslmode=disable
+```
+
+Replace your_username, your_password, and your_database with the same values you used when starting the PostgreSQL container.
+
+
+
+### 5. Install dependencies
+
+```bash
+cd apps/api
+go mod download
+
+```
+
+
+### 6. Start the API server
+
+```bash
+go run cmd/server/main.go
+
+```
+
+
